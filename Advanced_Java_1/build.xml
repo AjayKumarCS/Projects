@@ -1,0 +1,41 @@
+<project name="Advanced Java Assignment 1" default="main" basedir=".">
+	
+	<path id="classpath">
+		<fileset dir="./">
+			<include name="lib/*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="main" depends="clean, compile, build" />
+
+	<target name="compile">
+		<mkdir dir="compiled files" />
+		<javac release="8" includeantruntime="false" srcdir="src" destdir="compiled files" classpathref="classpath" />
+	</target>
+
+	<target name="copy-dependencies">
+		<mkdir dir="temp" />
+		<jar jarfile="temp/dependencies-all.jar">
+			<zipgroupfileset dir="lib">
+				<include name="**/*.jar" />
+			</zipgroupfileset>
+		</jar>
+	</target>
+
+	<target name="build" depends="copy-dependencies">
+		<mkdir dir="jar build" />
+		<jar jarfile="jar build/Advanced Java Assignment 1.jar" basedir="compiled files">
+			<manifest>
+				<attribute name="Main-Class" value="search.Main" />
+			</manifest>
+			<zipfileset src="temp/dependencies-all.jar" excludes="META-INF/*.SF" />
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete dir="compiled files" />
+		<delete dir="jar build" />
+		<delete dir="temp" />
+	</target>
+
+</project>
