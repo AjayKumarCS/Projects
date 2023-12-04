@@ -1,0 +1,53 @@
+{
+  "result": [
+    {
+      "id": 0,
+      "rollno": 1,
+      "name": "Student A",
+      "dob": "15-02-1990",
+      "score": "94"
+    },
+    {
+      "id": 1,
+      "rollno": 2,
+      "name": "Student B",
+      "dob": "17-02-1990",
+      "score": "82"
+    },
+    {
+      "rollno": 3,
+      "name": "Student C",
+      "dob": "19-02-1990",
+      "score": "84",
+      "id": 2
+    }
+  ],
+  "teacher": [
+    {
+      "id": 0,
+      "name": "ajay",
+      "email": "teacher@gmail.com",
+      "password": "teacher123"
+    },
+    {
+      "id": 1,
+      "name": "ravi",
+      "email": "ravi@gmail.com",
+      "password": "ravi123"
+    }
+  ],
+  "student": [
+    {
+      "id": 0,
+      "name": "ajay",
+      "email": "student@gmail.com",
+      "password": "student123"
+    },
+    {
+      "id": 1,
+      "name": "amit",
+      "email": "amit@gmail.com",
+      "password": "amit123"
+    }
+  ]
+}

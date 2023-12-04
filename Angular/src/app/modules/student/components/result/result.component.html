@@ -1,0 +1,19 @@
+<a routerLink="/student/home">Back</a>
+<table *ngFor="let item of studentResult">
+    <tr>
+        <td>Roll No.</td>
+        <td>{{item.rollno}}</td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>{{item.name}}</td>
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        <td>{{item.dob}}</td>
+    </tr>
+    <tr>
+        <td>Score</td>
+        <td>{{item.score}}</td>
+    </tr>
+</table>

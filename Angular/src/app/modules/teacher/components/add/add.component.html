@@ -1,0 +1,27 @@
+<a routerLink="/teacher/home" >Back</a>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success !</strong> Data has been entered successfully
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<form [formGroup]="addResult" (ngSubmit)="postResult()">
+    <div class="mb-3">
+        <label class="form-label">Roll No.</label>
+        <input type="text" class="form-control" placeholder="Enter Roll No." formControlName="rollno">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Date Of Birth</label>
+        <input type="text" class="form-control" placeholder="Enter Date Of Birth" formControlName="dob">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Score</label>
+        <input type="text" class="form-control" placeholder="Enter Score" formControlName="score">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+</form>
