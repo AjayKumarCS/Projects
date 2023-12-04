@@ -1,0 +1,18 @@
+{{#if alert}}
+{{alert}}
+{{/if}}
+<h2>Student Result</h2>
+
+<form action="/viewresult" method="post">
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Roll No</label>
+    <div class="col-sm-10">
+    <input type="text" class="form-control" name="rollno" required><br>
+    </div></div>
+    <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+    <input type="text" class="form-control" name="name" required><br>
+    </div></div>
+    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+</form>

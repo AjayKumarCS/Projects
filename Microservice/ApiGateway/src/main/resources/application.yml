@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: API-GATEWAY
+  config:
+    import: optional:configserver:http://localhost:8081
+  cloud:
+    gateway:
+       routes:
+         - id: CONFIG-SERVER
+           uri: lb://CONFIG-SERVER
+           predicates:
+             - Path=/actuator/info

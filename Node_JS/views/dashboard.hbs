@@ -1,0 +1,31 @@
+<a href="/logout" class="btn btn-danger logout">Log Out</a>
+<div>
+    <a href="/addresult" class="btn btn-primary">Add Result</a>
+</div>
+<div class="pt-5">
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">Roll No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Score</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+<tbody>
+{{#each rows}}
+    <tr>
+        <td>{{this.rollno}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.dob}}</td>
+        <td>{{this.score}}</td>
+        <td>
+            <a href="/editresult/{{this.id}}" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Edit</a>
+            <a href="/{{this.id}}" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Delete</a>
+            </td>
+    </tr>
+{{/each}}
+</tbody>
+</table>
+</div>

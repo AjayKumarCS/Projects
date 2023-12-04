@@ -1,0 +1,128 @@
+/* General CSS */
+
+.whiteTxt{
+    color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtPadding {
+    padding: 15px 70px 15px 10px;
+}
+
+.btnMargin {
+    margin: 0px 10px;
+}
+
+/* Header and Footer */
+
+header {
+    background-color: #45d8ad;
+    min-height: 8vh;
+    width: 100%;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #45d8ad;
+    min-height: 3vh;
+    width: 100%;
+}
+
+/* main content */
+
+body{ 
+    height:100vh; 
+    margin:0; 
+    display:flex; 
+    flex-direction:column; 
+}
+
+main > section {
+    width: 50%;
+}
+
+/* middle line */
+
+.middleLine {
+    background-color: #45d8ad;
+    width: 4px;
+    height: 70vh;
+}
+
+/* Complete right section */
+
+.rightSection {
+    margin-top: 3vh;
+}
+
+.outputTable {
+    margin: 10px auto ;
+    width: 90% !important;
+}
+
+.outputTable>tbody,
+.outputTable>thead {
+    display: block;
+}
+
+.outputTable>tbody {
+    height: 68vh; 
+    overflow-y: auto;  
+    overflow-x: hidden; 
+}
+
+.outline {
+    border: 1px solid #8aa735 !important;
+    border-collapse: collapse;
+}
+
+.imgResize {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}
+
+/* modifying bootstrap css */
+
+.table-striped>tbody>tr:nth-child(even)>td {
+    background-color: #ebf2d3;
+} 
+
+.table-striped>tbody>tr:nth-child(odd)>td {
+    background-color: #ffffff;
+} 
+
+.table-striped>thead>tr:nth-child(odd)>th {
+    background-color: #a7c941;
+}
+
+/* animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0; 
+    animation: fadeIn 2s forwards;
+}
+
+/* fixes */
+
+.row {
+    --bs-gutter-x: 0rem !important;
+}
+
+tbody::-webkit-scrollbar {
+    width: 0px;
+}

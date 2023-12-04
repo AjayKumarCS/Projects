@@ -1,0 +1,25 @@
+<div>
+    <a href="/viewresult" class="btn btn-primary">Search another result</a>
+</div>
+{{#each rows}}
+<div class="pt-5">
+<table class="table">
+    <tr>
+        <th>Roll No</th>
+        <td>{{this.rollno}}</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>{{this.name}}</td>
+    </tr>
+    <tr>
+        <th>Date of Birth</th>
+        <td>{{this.dob}}</td>
+    </tr>
+    <tr>
+        <th>Score</th>
+        <td>{{this.score}}</td>
+    </tr>
+</table>
+</div>
+{{/each}}
